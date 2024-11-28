@@ -3,6 +3,7 @@ const Hapi = require('@hapi/hapi');
 const recommendationRoutes = require('./routes/recommendationRoutes');
 const mostVisitedRoutes = require('./routes/mostVisitedRoutes');
 const placeRoutes = require('./routes/placeRoutes');
+const nearestRoutes = require('./routes/nearestRoutes');
 
 const init = async () => {
   const server = Hapi.server({
@@ -14,6 +15,7 @@ const init = async () => {
   server.route(recommendationRoutes);
   server.route(mostVisitedRoutes);
   server.route(placeRoutes);
+  server.route(nearestRoutes);
   
   // Start the server
   await server.start();
