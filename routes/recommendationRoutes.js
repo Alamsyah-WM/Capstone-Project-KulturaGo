@@ -1,16 +1,18 @@
-const recommendationHandler = require('../handlers/recommendationHandler');
-
+const postPredictHandler = require('../handlers/recommendationHandler');
+ 
 const routes = [
   {
+    path: '/predict',
     method: 'POST',
-    path: '/preferences/recommendations',
-    handler: recommendationHandler.addPreferences,
-  },
-  {
-    method: 'GET',
-    path: '/api/recommendations',
-    handler: recommendationHandler.getRecommendations,
-  },
-];
-
+    handler: postPredictHandler,
+    options: {
+      payload: {
+        /*Mengizinkan data berupa gambar*/
+        allow: 'application/json',
+        parse: true
+      }
+    }
+  }
+]
+ 
 module.exports = routes;

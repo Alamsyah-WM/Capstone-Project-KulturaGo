@@ -2,3 +2,6 @@ node_modules/
 .env
 serviceaccountkey.json
 firebase-key.json
+serviceaccountkey.json
+serviceaccountkey.json
+firebase-key.json
