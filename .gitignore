@@ -1,4 +1,4 @@
 node_modules/
 .env
 serviceaccountkey.json
-firebase-key.json
+venv/
